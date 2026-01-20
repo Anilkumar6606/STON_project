@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme helpers */
+:root {
+	--brand-bg: linear-gradient(135deg, #1a1a3e 0%, #2d2d7f 50%, #4040bf 100%);
+}
+
+html, body {
+	height: 100%;
+}
+
+/* Reset minor defaults for consistency */
+* {
+	box-sizing: border-box;
+}
+
+/* Links look good on dark theme */
+a {
+	color: #93c5fd;
+}
+a:hover {
+	color: #bfdbfe;
+}

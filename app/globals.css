@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+:root {
+  /* Light blue-violet color palette */
+  --background: oklch(0.97 0.015 270);
+  --foreground: oklch(0.25 0.08 280);
+  --card: oklch(0.99 0.01 270);
+  --card-foreground: oklch(0.25 0.08 280);
+  --popover: oklch(0.99 0.01 270);
+  --popover-foreground: oklch(0.25 0.08 280);
+  --primary: oklch(0.55 0.18 280);
+  --primary-foreground: oklch(0.99 0.01 270);
+  --secondary: oklch(0.85 0.08 270);
+  --secondary-foreground: oklch(0.25 0.08 280);
+  --muted: oklch(0.90 0.05 270);
+  --muted-foreground: oklch(0.50 0.10 280);
+  --accent: oklch(0.65 0.15 285);
+  --accent-foreground: oklch(0.99 0.01 270);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.98 0.001 0);
+  --border: oklch(0.88 0.04 270);
+  --input: oklch(0.94 0.03 270);
+  --ring: oklch(0.55 0.18 280);
+  --chart-1: oklch(0.65 0.18 270);
+  --chart-2: oklch(0.60 0.15 285);
+  --chart-3: oklch(0.55 0.18 280);
+  --chart-4: oklch(0.70 0.15 275);
+  --chart-5: oklch(0.75 0.12 290);
+  --radius: 0.5rem;
+  --sidebar: oklch(0.96 0.02 270);
+  --sidebar-foreground: oklch(0.30 0.10 280);
+  --sidebar-primary: oklch(0.55 0.18 280);
+  --sidebar-primary-foreground: oklch(0.99 0.01 270);
+  --sidebar-accent: oklch(0.92 0.05 270);
+  --sidebar-accent-foreground: oklch(0.30 0.10 280);
+  --sidebar-border: oklch(0.88 0.04 270);
+  --sidebar-ring: oklch(0.65 0.15 280);
+}
+
+.dark {
+  --background: oklch(0.15 0.04 280);
+  --foreground: oklch(0.92 0.05 270);
+  --card: oklch(0.20 0.05 280);
+  --card-foreground: oklch(0.92 0.05 270);
+  --popover: oklch(0.20 0.05 280);
+  --popover-foreground: oklch(0.92 0.05 270);
+  --primary: oklch(0.70 0.18 275);
+  --primary-foreground: oklch(0.15 0.04 280);
+  --secondary: oklch(0.30 0.08 280);
+  --secondary-foreground: oklch(0.92 0.05 270);
+  --muted: oklch(0.35 0.08 280);
+  --muted-foreground: oklch(0.70 0.10 275);
+  --accent: oklch(0.65 0.15 285);
+  --accent-foreground: oklch(0.15 0.04 280);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.30 0.06 280);
+  --input: oklch(0.25 0.05 280);
+  --ring: oklch(0.70 0.18 275);
+  --chart-1: oklch(0.65 0.18 270);
+  --chart-2: oklch(0.70 0.15 280);
+  --chart-3: oklch(0.60 0.18 285);
+  --chart-4: oklch(0.75 0.15 275);
+  --chart-5: oklch(0.68 0.16 290);
+  --sidebar: oklch(0.18 0.05 280);
+  --sidebar-foreground: oklch(0.92 0.05 270);
+  --sidebar-primary: oklch(0.65 0.18 275);
+  --sidebar-primary-foreground: oklch(0.95 0.03 270);
+  --sidebar-accent: oklch(0.28 0.07 280);
+  --sidebar-accent-foreground: oklch(0.92 0.05 270);
+  --sidebar-border: oklch(0.28 0.06 280);
+  --sidebar-ring: oklch(0.55 0.15 280);
+}
+
+@theme inline {
+  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply text-white;
+  }
+}
+
+.ston-gradient {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(55, 55, 120, 0.25) 0, rgba(8, 8, 20, 0) 40%),
+    radial-gradient(circle at 80% 30%, rgba(70, 70, 255, 0.25) 0, rgba(10, 10, 40, 0) 45%),
+    linear-gradient(135deg, #05050f 0%, #0b0b2a 38%, #20208a 70%, #3a3ad8 100%);
+}
+
+/* Hide Next.js DevTools icon and badges */
+#__next-dev-devtools,
+[data-nextjs-devtools],
+nextjs-portal {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Hide scrollbar for sidebar navigation */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
